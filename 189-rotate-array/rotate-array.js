@@ -5,7 +5,6 @@
  */
 var rotate = function(nums, k) {
     let arr=[]
-    k=k%nums.length
     for(let i=0;i<nums.length;i++)
     {
         arr[(i+k)%nums.length]=nums[i]

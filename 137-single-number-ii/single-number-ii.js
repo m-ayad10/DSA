@@ -3,13 +3,13 @@
  * @return {number}
  */
 var singleNumber = function(nums) {
-    let maps=new Map()
-    for(let i=0;i<nums.length;i++)
+    const maps=new Map()
+    for(const i of nums)
     {
-        let count=(maps.get(nums[i])||0)+1
-        maps.set(nums[i],count)
+        let count=(maps.get(i)||0)+1
+        maps.set(i,count)
     }
-    for(let [k,v] of maps)
+    for(const [k,v] of maps)
     {
         if(v==1) return k
     }

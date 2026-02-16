@@ -21,7 +21,9 @@ function findIndex(arr, left, right, target){
 }
 
 var search = function(nums, target) {
-    let left=0;
-    let right=nums.length-1;
-    return findIndex(nums,left,right,target)
+    for(let i=0;i<nums.length;i++)
+        {
+            if(nums[i]==target) return i;
+        }
+        return -1;
 };

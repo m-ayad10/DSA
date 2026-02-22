@@ -1,0 +1,2 @@
+-- Write your PostgreSQL query statement below
+select customer_number from (select customer_number, dense_rank() over(order by count(customer_number) desc)as rank from Orders group by customer_number) where rank=1
